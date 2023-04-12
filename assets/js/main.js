@@ -1,11 +1,33 @@
 let menuOpen =document.querySelector('.menu-toggle');
 let menuWrapper =document.querySelector('.menu-wrapper');
+let btnLeft =document.querySelector('.btn-left');
+let btnRight =document.querySelector('.btn-right');
 
 menuOpen.addEventListener('click', function(){
     // console.log(1);
     menuOpen.classList.toggle('bx-x');
     menuOpen.classList.toggle('bxs-grid-alt');
     menuWrapper.classList.toggle('active');
+})
+
+btnLeft.addEventListener('mouseover', function(){
+  btnLeft.classList.toggle('bx-chevron-left-circle');
+  btnLeft.classList.toggle('bxs-chevron-left-circle');
+})
+
+btnLeft.addEventListener('mouseout', function(){
+  btnLeft.classList.toggle('bx-chevron-left-circle');
+  btnLeft.classList.toggle('bxs-chevron-left-circle');
+})
+
+btnRight.addEventListener('mouseover', function(){
+  btnRight.classList.toggle('bx-chevron-right-circle');
+  btnRight.classList.toggle('bxs-chevron-right-circle');
+})
+
+btnRight.addEventListener('mouseout', function(){
+  btnRight.classList.toggle('bx-chevron-right-circle');
+  btnRight.classList.toggle('bxs-chevron-right-circle');
 })
 
 var swiper = new Swiper(".mySwiper", {

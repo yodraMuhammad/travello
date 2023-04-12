@@ -57,7 +57,6 @@ section{
 }
 
 .nav-wrapper .menu-wrapper{
-    position: relative;
     display: flex;
     gap: 50px;
 }
@@ -65,14 +64,19 @@ section{
 .nav-wrapper .menu-wrapper .menu{
     display: flex;
     align-items: center;
-    gap: 70px;
+    gap: 40px;
 }
+
 
 .nav-wrapper .menu-wrapper .menu-link{
     font-size: 1.25rem;
     color: var(--main-color);
     font-family: var(--heading-font);
     font-weight: 500;
+    padding: 15px 15px;
+    border-radius: 25px;
+    text-align: center;
+    transition: .2s ease-in-out;
 }
 
 .nav-wrapper .menu-wrapper .menu-link.active{
@@ -89,7 +93,6 @@ section{
     padding: 25px 30px;
     border-radius: 50px;
 }
-
 
 
 /* Home Start */
@@ -150,10 +153,11 @@ section{
     background-color: rgb(255, 255, 255);
     border-radius: 70px;
     margin-top: 50px;
-    border: 3px solid white;
-    display: flex;
+    border: 3px solid #fff;
+    display:flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .form-panel img{
@@ -228,7 +232,9 @@ section{
 }
 
 .content-right .img-wrapper{
-    max-width: 800px;
+    width:100%;
+    position: relative;
+    right: -9% ;
 }
 
 .content-right .img-wrapper img{
@@ -240,6 +246,7 @@ section{
 }
 .home-wrapper .content-right{
     flex: 0 0 50%;
+    max-width: 800px;
 }
 
 /* Home End */
@@ -249,7 +256,6 @@ section{
 
 .service-wrapper .row1{
     text-align: center;
-
 }
 
 
@@ -449,7 +455,6 @@ section{
 
 .btn-produk a{
     color: #fff;
-
 }
 /* Produk End */
 
@@ -492,6 +497,74 @@ section{
     border-radius: 35px;
 }
 /* banner 1 end */
+
+/* statistik start */
+.statistik .statistik-wrapper{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.statistik-wrapper .content-img{
+    flex-wrap: 0 0 50%;
+    max-width: 600px;
+}
+
+.statistik-wrapper .content-statis{
+    flex: 0 0 50%;
+}
+
+.content-img img{
+    width: 100%;
+}
+
+.content-statis .label-statis{
+    font-size: 20px;
+    font-family: var(--heading-font);
+    color: var(--second-color);
+}
+
+.content-statis .heading-statis{
+    font-family: var(--heading-font);
+    font-size: 40px;
+    font-weight: 700;
+    width: 70%;
+    margin: 20px 0;
+    color: #4a4a4a;
+}
+
+.content-statis .subheading-statis{
+    font-size: 20px;
+    width: 60%;
+    margin: 20px 0;
+    color: #4a4a4a;
+}
+
+.content-statis .angka-wrapper{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 30px;
+}
+
+.angka-wrapper .box-angka{
+    text-align: center;
+}
+
+.box-angka h1{
+    font-family: (var(--heading-font));
+    font-weight: 800;
+    font-size: 40px;
+    color: var(--second-color);
+}
+
+.box-angka p{
+    color: #4a4a4a;
+}
+/* statistik end */
+
+
 @media screen and (max-width: 911px) {
     .navbar .nav-wrapper{
         padding: 0px 30px;
@@ -510,9 +583,16 @@ section{
 }
 
 @media screen and (max-width: 768px) {
+    .container{
+        max-width: 600px; 
+    }
+
+    .content-right, .content-img{
+        display: none;
+    }
     .nav-wrapper .menu-wrapper{
         position: absolute;
-        top: 23%;
+        top: 15%;
         left: 50%;
         transform: translateX(-50%);
         width: 80%;
@@ -541,7 +621,7 @@ section{
 
     .menu-wrapper .menu .menu-item{
         margin: 30px ;
-
+        padding: 20px;
     }
     .menu .menu-item .menu-link{
         color: #fff;
@@ -553,4 +633,24 @@ section{
         color: var(--main-color);
         transition: .5s;
     }
+
+    .content-left .form-panel{
+        width: auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container{
+        max-width: 450px; 
+    }
+}
+
+.btnhover:hover, .detail-produk .btn-produk:hover, .banner1 .btn-book a:hover{
+    background-color: #eb882c;
+}
+
+.menu-wrapper .menu-link:hover{
+    background-color: #355DAB;
+    color: white;
+    transition: .2s ease-in-out;
 }
