@@ -48,3 +48,13 @@ var swiper = new Swiper(".mySwiper", {
         prevEl: ".btn-left",
       },
   });
+
+  var swiper = new Swiper(".mySwiperTesti", {
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    autoplay: {
+      delay: 2500,
+      disableOnInteraction: false,
+    },
+  });

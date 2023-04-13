@@ -1,5 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@500;700&display=swap');
 
+@keyframes  infiniteup {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-40px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.updown-animation{
+    animation-name: infiniteup;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
 :root{
     --main-color : #1F4590;
     --second-color : #FFA451;
@@ -465,6 +483,7 @@ section{
     background-color: var(--main-color);
     margin-bottom: 200px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     text-align: center;
     align-items: center;
@@ -491,6 +510,7 @@ section{
 }
 
 .banner1 .btn-book a{
+    display: block;
     color: #fff;
     background-color: var(--second-color);
     padding: 20px 40px;
@@ -504,21 +524,22 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .statistik-wrapper .content-img{
-    flex-wrap: 0 0 50%;
-    max-width: 600px;
+    width: 500px;
 }
 
 .statistik-wrapper .content-statis{
-    flex: 0 0 50%;
+    width: 700px;
 }
 
 .content-img img{
-    width: 100%;
+    width:100%;
+    position: relative;
+    right: 13% ;
 }
-
 .content-statis .label-statis{
     font-size: 20px;
     font-family: var(--heading-font);
@@ -564,6 +585,218 @@ section{
 }
 /* statistik end */
 
+/* Testi Start */
+.testi-wrapper{
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testi-wrapper .col-heading, .col-slider-testi{
+    width: 700px;
+}
+
+.col-heading .label-testi{
+    font-size: 25px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: var(--second-color);
+}
+
+.col-heading .heading-testi{
+    font-size: 36px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    color: #4a4a4a;
+    margin: 25px 0;
+}
+
+.col-slider-testi .card-testi{
+    background-color: #fff;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 2px 2px 20px rgba(39, 39, 39, 0.356);
+    padding: 30px;
+    position: relative;
+}
+
+.text-testi{
+    /* display: flex; */
+    padding: 20px;
+    position: relative;
+    width: 70%;
+    margin: auto;
+}
+.bxs-quote-left{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.bxs-quote-right{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.card-testi .status{
+    margin-top: 5px;
+    color: var(--second-color);
+}
+
+/* Testi End */
+
+/* Banner 2 Start */
+.banner2-wrapper{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 40px 90px;
+    border-radius: 20px ;
+    flex-wrap: wrap;
+}
+
+.content-banner2 .heading{
+    font-size: 36px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+
+}
+.content-banner2 .heading{
+    font-size: 20px;
+    font-family: var(--heading-font);
+    margin-top: 20px;    
+}
+
+.content-banner2 .disc{
+    background-color: #284f9d5e;
+    color: #fff;
+    font-family: var(--heading-font);
+    font-size: 24px;
+    font-weight: 700;
+    border-radius: 10px;
+    width: 60%;
+    text-align: center;
+    padding: 10px 30px;
+    margin-top: 26px;
+}
+
+.btn-banner2 .btn-regist{
+    background-color: var(--main-color);
+    color: white;
+    font-family: var(--heading-font);
+    font-size: 24px;
+    padding: 20px 30px;
+    border-radius: 50px;
+}
+/* Banner 2 End */
+
+/* Footer Start */
+.footer{
+    margin-top: 200px;
+}
+
+.footer-wrapper{
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-1 .logo-footer{
+    font-family: var(--heading-font);
+    font-size: 50px;
+    color: var(--main-color);
+    font-weight: 700;
+}
+
+.logo-footer span{
+    font-size: 30px;
+    color: var(--second-color);
+}
+
+.col-1 .subheading-footer{
+    font-size: 20px;
+    margin: 20px 0;
+    width: 400px;
+}
+
+.sosmed-icon i{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    margin: 10px 0;
+    margin-right: 8px;
+}
+
+.sosmed-icon i:hover{
+    color: var(--second-color);
+}
+
+.col-1 .copy{
+    margin: 10px 0;
+    font-size: 15px;
+    color: #4a4a4a;
+}
+
+.col-2, .col-3, .col-4{
+    text-align: center;
+}
+
+.col-2 h3, .col-3 h3, .col-4 h3, .col-5 h3{
+    font-size: 25px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.col-2 ul li, .col-3 ul li,.col-4 ul li{
+    margin-top: 10px;
+}
+
+/* Footer End */
+.col-2 ul li a, .col-3 ul li a, .col-4 ul li a{
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: 400;
+}
+
+.col-5 p{
+    margin-top: 8px;
+    font-size: 14px;
+    color: #4a4a4a;
+    font-weight: 400;
+}
+
+.form-input{
+    padding: 10px 20px;
+    margin-top: 30px;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.103);
+    border-radius: 5px;
+}
+
+.form-input input{
+    border: none;
+}
+
+.form-input input:focus{
+    outline: none;
+}
+
+.form-input .btn-footer{
+    background-color: var(--second-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+}
+.form-input .btn-footer:hover{
+    cursor: pointer;
+    background-color:#eb882c;
+}
 
 @media screen and (max-width: 911px) {
     .navbar .nav-wrapper{
@@ -584,16 +817,21 @@ section{
 
 @media screen and (max-width: 768px) {
     .container{
-        max-width: 600px; 
+        max-width: 700px; 
     }
 
-    .content-right, .content-img{
+    .content-right {
         display: none;
     }
+    
+    .content-left{
+        height: 390px;
+    }
+
     .nav-wrapper .menu-wrapper{
-        position: absolute;
-        top: 15%;
-        left: 50%;
+        position: relative;
+        top: 200%;
+        left: 25%;
         transform: translateX(-50%);
         width: 80%;
         display: block;
@@ -602,6 +840,7 @@ section{
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
         transition: .5s ease-in-out;
         background-color: var(--main-color);
+        z-index: 100;
     }
 
     .nav-wrapper .menu-wrapper.active{
@@ -637,12 +876,142 @@ section{
     .content-left .form-panel{
         width: auto;
     }
+    .statistik-wrapper .content-img{
+        margin: auto;
+    }
+    .statistik-wrapper .content-statis{
+        margin: 20px 0;
+        text-align: center;
+    }
+    .content-statis .subheading-statis,.content-statis .heading-statis, .content-statis .angka-wrapper{
+        margin: 20px auto;
+    }
+
+    .content-img img{
+        right: 0;
+    }
+
+    .testi-wrapper .col-heading{
+        text-align: center;
+        margin: auto;
+    }
+
+    .testi-wrapper .col-slider-testi{
+        margin: 20px auto;
+    }
+
+    .banner2-wrapper{
+        flex-wrap: nowrap;
+    }
+    .footer{
+        padding: 20px 10px;
+    }
+    .footer-wrapper{
+        justify-content: space-around;
+        gap: 20px;
+    }
+    .col-1{
+        width: 100%;
+        text-align: center;
+    }
+    .col-1 .subheading-footer{
+        margin: 20px auto;
+    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 450px) {
     .container{
-        max-width: 450px; 
+        max-width: 430px; 
     }
+
+    .menu-wrapper .menu .menu-item{
+        margin: 5px 0;
+        padding: 15px;
+    }
+
+    .nav-wrapper .menu-wrapper{
+        position: relative;
+        top: 125%;
+        left: 25%;
+        display: block;
+        padding-bottom: 3rem;
+        border-radius: 10px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: .5s ease-in-out;
+        background-color: var(--main-color);
+        z-index: 100;
+    }
+
+    .nav-wrapper .menu-wrapper .menu-link{
+        font-size: 1rem;
+        color: white;
+        font-family: var(--heading-font);
+        font-weight: 500;
+        padding: 0px 0px;
+        border-radius: 0px;
+        text-align: center;
+        /* transition: .2s ease-in-out; */
+    }
+    .content-left .heading{
+        font-size: 40px;
+        width: 430px;
+    }
+    .content-left .subheading{
+        width: 430px;
+    }
+    .form-panel{
+        display: none;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .content-left .sugestion{
+        display: none;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    .banner1 .btn-book{
+        margin: auto;
+        margin-top: 30px;
+    }
+
+    .testi-wrapper .col-heading{
+        text-align: center;
+        margin: auto;
+    }
+
+    .testi-wrapper .col-slider-testi{
+        margin: 20px auto;
+        width: 400px;
+    }
+ 
+    .btn-banner2{
+        margin: 40px 0;
+    }
+    
+    .banner2-wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .content-banner2 .disc{
+        margin: 20px auto;
+
+    }
+
+    .footer-wrapper{
+        justify-content: space-around;
+        gap: 20px;
+    }
+
+    .col-5{
+        margin: auto;
+        text-align: center;
+    }
+
+    .col-5 .form-input{
+        margin: 5px 0;
+    }
+    
 }
 
 .btnhover:hover, .detail-produk .btn-produk:hover, .banner1 .btn-book a:hover{
